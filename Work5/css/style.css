@@ -132,7 +132,7 @@ body {
     width: 50%;
 }
 .message{
-    width:410px;
+    width:41％;
 }
 
 .message img{
@@ -478,6 +478,12 @@ footer{
          font-size: 16px;
          padding:20px 15px 15px 30px;
      }
+     .event-wrap ul{
+        max-width:350px;
+        margin: 0 auto;
+    }
+
+
      .pc-span{
          display: block;
          line-height:1;
