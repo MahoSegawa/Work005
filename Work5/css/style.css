@@ -145,7 +145,7 @@ body {
     line-height: 1.386;
     margin-bottom: 34px;
     font-weight: lighter;
-    width: 349.496px;
+    /* width: 349.496px; */
 }
 .message p {
     font-size: 16px;
@@ -220,7 +220,7 @@ body {
 
 }
 span{
-    border-bottom: solid 1px;
+    text-decoration: underline;
     margin-left: 55px;
 }
 
@@ -377,7 +377,7 @@ footer{
 
   @media screen and (max-width: 767px) {
    .catch-copy{
-      font-size:30px;
+      font-size:36px;
       margin: 0;
       padding:0px 0px 20px 0px;
 
@@ -401,6 +401,9 @@ footer{
     .message h2{
         display: none;
     }
+    .message h3{
+        text-align: left;
+    }
     .sp img{
         display: block; 
         width: 160px;
@@ -416,6 +419,7 @@ footer{
     }
     .about-container .sp-aboutus-img{
         display:block;
+        max-width: none;
         margin: 0 calc(50% - 50vw);
         width: 100vw;   
     }
@@ -436,7 +440,7 @@ footer{
      }
     .item{
          margin: 0 auto;
-         width: 80%;
+         width: 92.39%;
          margin-bottom: 65px;
      }
      .sweets-sp,.food-sp,.drink-sp{
@@ -465,7 +469,7 @@ footer{
 
      .event{
          width: 100px;
-         margin: 0px 125px;
+         margin: 0 auto;
          padding-bottom: 20px;
      }
      .event-wrap{
@@ -481,7 +485,7 @@ footer{
          white-space: nowrap;  /* ここから */
          overflow: hidden;
          text-overflow: ellipsis; /* ここまでが省略表示のためのCSS */
-         border-bottom: solid 1px;
+         text-decoration: underline;
      }
      .event-content{
          margin-bottom: 25px;
@@ -522,7 +526,7 @@ footer{
         width: 100px;
         position:fixed;
         right: 10px;
-        bottom: 230px;
+        bottom: 10px;
       }
   
       .copyright{
