@@ -71,6 +71,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding-top: 10px;
+    z-index: 100;
 
 }
 .pc-nav ul {
@@ -196,13 +197,75 @@ body {
 .gallery{
     width: 245.1846px;
     margin: 0 auto;
-    margin-bottom: 400px;
+    margin-bottom: 30px;
 }
+
+.sliderArea {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 25px;
+}
+/* .sliderArea.w300 {
+	max-width: 384px;
+} */
+.slick-dots li button{
+    display: none;
+}
+
+.slick-slide img {
+	width: 384px;
+	height: auto;
+}
+.slick-prev, .slick-next {
+	z-index: 140;
+}
+
+.slick-next{
+    right:0!important;
+  }
+  .slick-prev{
+    left:0!important;
+  }
+  .slick-arrows{
+    z-index:100!important;
+  }
+.slick-prev:before, .slick-next:before {
+	color: #fff;
+}
+.slick-active {
+	opacity: 1;
+}
+.slick-current {
+	opacity: 1;
+}
+.thumb {
+	margin: 20px 0 0;
+}
+.thumb .slick-slide {
+	cursor: pointer;
+}
+.thumb .slick-slide:hover {
+	opacity: .7;
+}
+
+/*==================
+.full-screen
+==================*/
+
+.full-screen_one .slick-list {
+	overflow: visible;
+}
+.full-screen_one.slider {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
 /* event */
 .event{
     width: 173.8252px;
     margin: 0 auto;
     padding-bottom: 40px;
+    padding-top: 70px;
 }
 .event-wrap {
     display: flex;
@@ -280,7 +343,19 @@ footer{
 .sweets-sp,.food-sp,.drink-sp{   /* スマホメニュー画像隠す */
     display: none;
 }
-
+ /* スライダーの調整 */
+ .slick-dots {
+    bottom:30px
+}
+.slick-dots li.slick-active button:before{
+    color: #fff;
+}
+.slick-dots li button ::before {
+    color: #fff;
+}
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
+}
 /* スマホ表示/1100px */
 
   @media  screen and (max-width: 1100px){

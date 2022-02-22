@@ -7,8 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>デザインカフェ</title>
     <meta name="description" content="デザインカフェのサイト">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 
 
@@ -38,11 +42,19 @@
 
         </div>
         <div class="slider">
-            <picture>
+            <div>
+                <picture>
                 <source media="(max-width:767px)" srcset="img/images/sp_main_vs@2x-100.jpg 767w" sizes="100vw">
                 <img src="img/images/pc_first-100.jpg" alt="カフェの様子">
             </picture>
         </div>
+        <div>
+        <picture>
+            <source media="(max-width:767px)" srcset="img/images/sp_main_vs_2@2x-100.jpg 767w" sizes="100vw">
+            <img src="img/images/slider_2.jpg" alt="カフェの様子">
+        </picture>
+    </div>
+</div>
     </header>
 
     <section>
@@ -93,9 +105,50 @@
             </div>
         </div>
     </section>
-    <section id="gallery" class="width">
+    <section id="gallery">
         <h2 class="gallery"><img src="img/images/gallery@2x.png" alt="gallery"></h2>
-    </section>
+        <div class="sliderArea">
+            <div class="full-screen_one slider">
+                <div>
+                    <picture>
+                    <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+                    <img src="img/images/pc_gallary_01-100.jpg" alt="カフェの様子">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+                <img src="img/images/pc_gallary_02-100.jpg" alt="カフェの様子">
+            </picture>
+        </div>
+        <div>
+            <picture>
+            <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+            <img src="img/images/pc_gallary_03-100.jpg" alt="カフェの様子">
+        </picture>
+    </div>
+    <div>
+        <picture>
+        <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+        <img src="img/images/pc_gallary_04-100.jpg" alt="カフェの様子">
+    </picture>
+</div>
+<div>
+    <picture>
+    <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+    <img src="img/images/pc_gallary_05-100.jpg" alt="カフェの様子">
+</picture>
+</div>
+<div>
+    <picture>
+    <source media="(max-width:767px)" srcset="img/images/mobile_gallery-100.jpg 767w" sizes="100vw">
+    <img src="img/images/pc_gallary_02-100.jpg" alt="カフェの様子">
+</picture>
+</div>
+
+    </div>
+</div>
+</section>
 
     <section id="event" class="width">
         <h2 class="event"><img src="img/images/event@2x.png" alt="event"></h2>
@@ -149,7 +202,37 @@
                 }, speed, "swing");
                 return false;
             });
+            $('.slider').slick({
+                autoplaySpeed:2000,
+                autoplay:true,
+                dots:true,
+                arrows:false,
+            });
         });
+        // ギャラリースライダー
+        $(document).on('ready', function() {
+  $(".full-screen_one").slick({
+    centerMode: true,
+    centerPadding: '5%',
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 800,
+    arrows: true,
+    infinite: true,
+  });
+  $(".full-screen_one").on("afterChange", function(event, slick, currentSlide, nextSlide) {
+    switch (currentSlide){
+      case 0:
+        // 1枚目のスライド
+        $(this).slick("slickSetOption", "autoplaySpeed", 10000);
+        break;
+      default:
+        // その他のスライド
+        $(this).slick("slickSetOption", "autoplaySpeed", 3500);
+        break;
+    }
+  });
+});
     </script>
 </body>
 
