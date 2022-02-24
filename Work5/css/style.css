@@ -229,7 +229,7 @@ body {
   border-top: 4px solid #fff;
   border-right: 4px solid #fff;
   transform: rotate(45deg);
-  right:270px!important;
+  right:18%!important;
   }
   .slick-prev{
     left:0!important;
@@ -240,7 +240,7 @@ body {
     border-left: 4px solid #fff;
     border-bottom: 4px solid #fff;
     transform: rotate(45deg);
-    left:270px!important;
+    left:18%!important;
       }
     
   .slick-arrows{
@@ -548,18 +548,8 @@ footer{
      .gallery{
          width: 142px;
          margin-top: 30px;
-         margin-bottom: 120px;
+         margin-bottom: 20px;
      }
-     .full-screen_one img{
-        width: 730px;
-    }
-    .slick-next{
-        right:30px!important;
-      }
-    
-    .slick-prev{
-        left:30px!important;
-      }
 
      /* event */
 
